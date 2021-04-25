@@ -43,6 +43,7 @@ print('成功邀请%d位好友'%(mk))
 
 SERVER_KEY = os.getenv('SERVER_KEY')
 if SERVER_KEY:
+    text = 'WPS邀请好友任务：成功邀请到%d位好友'%(mk)
     data = {
         'text':'WPS邀请好友任务：成功邀请到%d位好友'%(mk),
         'desp':'成功邀请%d位好友'%(mk)
