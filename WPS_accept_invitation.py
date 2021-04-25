@@ -1,4 +1,4 @@
-invite_userids = [244668941]
+invite_userids = [842920625]
 
 import json, os, time
 import requests
@@ -47,7 +47,8 @@ if SERVER_KEY:
         'text':'WPS邀请好友任务：成功邀请到%d位好友'%(mk),
         'desp':'成功邀请%d位好友'%(mk)
     }
-    requests.post('https://sc.ftqq.com/%s.send'%(SERVER_KEY.strip()), data = data)
+#    requests.post('https://sc.ftqq.com/%s.send'%(SERVER_KEY.strip()), data = data)
+    requests.get('https://qmsg.zendee.cn/send/%s?msg=%s' % (SERVER_KEY.strip(), text))
 
 BARK_URL = os.getenv('BARK_URL')
 if BARK_URL:
